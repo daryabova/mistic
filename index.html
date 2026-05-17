@@ -1,8 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Блог психически здоровой ВедьМы</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,175 +11,215 @@
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:'Montserrat', sans-serif;
-background:linear-gradient(180deg,#fff4f8 0%,#ffe6ef 100%);
-color:#5c3a46;
-min-height:100vh;
-overflow-x:hidden;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #fff4f8 0%, #ffe6ef 100%);
+    color:#5c3a46;
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
 .container{
-width:100%;
-max-width:480px;
-margin:0 auto;
-padding:20px;
+    width:100%;
+    max-width:480px;
+    margin:0 auto;
+    padding:20px;
 }
 
 .hero{
-background:rgba(255,255,255,0.75);
-border:1px solid rgba(212,175,55,0.35);
-backdrop-filter:blur(12px);
-border-radius:28px;
-padding:28px 22px;
-text-align:center;
-box-shadow:0 10px 30px rgba(214,153,174,0.18);
-margin-top:20px;
+    background:rgba(255,255,255,0.75);
+    border:1px solid rgba(212,175,55,0.35);
+    backdrop-filter: blur(12px);
+    border-radius:28px;
+    padding:28px 22px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(214, 153, 174, 0.18);
+    margin-top:20px;
+}
+
+.photo-placeholder{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    margin:0 auto 20px;
+    background:linear-gradient(135deg,#ffd1e3,#fff0c7);
+    border:3px solid #d4af37;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:16px;
+    color:#7a5963;
+    font-size:13px;
+    line-height:1.4;
 }
 
 h1{
-font-family:'Cormorant Garamond', serif;
-font-size:42px;
-color:#a65c74;
-margin-bottom:8px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:42px;
+    color:#a65c74;
+    margin-bottom:8px;
 }
 
 .channel{
-font-size:15px;
-color:#8d6671;
-margin-bottom:18px;
+    font-size:15px;
+    color:#8d6671;
+    margin-bottom:18px;
 }
 
 .slogan{
-font-size:16px;
-line-height:1.7;
-color:#5b4850;
+    font-size:16px;
+    line-height:1.7;
+    color:#5b4850;
 }
 
 .tool-box{
-margin-top:26px;
-background:white;
-border-radius:28px;
-padding:28px 22px;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
-border:1px solid rgba(212,175,55,0.25);
+    margin-top:26px;
+    background:white;
+    border-radius:28px;
+    padding:28px 22px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    border:1px solid rgba(212,175,55,0.25);
 }
 
 .tool-title{
-font-family:'Cormorant Garamond', serif;
-font-size:34px;
-text-align:center;
-color:#b26b83;
-margin-bottom:14px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    text-align:center;
+    color:#b26b83;
+    margin-bottom:14px;
 }
 
 .tool-description{
-text-align:center;
-line-height:1.7;
-color:#6b4d57;
-margin-bottom:24px;
+    text-align:center;
+    line-height:1.7;
+    color:#6b4d57;
+    margin-bottom:24px;
 }
 
 .symbols{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
 }
 
 .symbol{
-background:linear-gradient(135deg,#ffe4ee,#fff4d2);
-border:none;
-border-radius:20px;
-height:90px;
-font-size:34px;
-cursor:pointer;
-transition:0.3s;
-box-shadow:0 6px 15px rgba(214,175,55,0.12);
+    background:linear-gradient(135deg,#ffe4ee,#fff4d2);
+    border:none;
+    border-radius:20px;
+    height:90px;
+    font-size:34px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 6px 15px rgba(214,175,55,0.12);
 }
 
 .symbol:hover{
-transform:translateY(-4px) scale(1.03);
+    transform:translateY(-4px) scale(1.03);
 }
 
 .result{
-margin-top:24px;
-padding:22px;
-border-radius:22px;
-background:#fff8fb;
-border:1px solid rgba(212,175,55,0.3);
-display:none;
-animation:fadeIn 0.5s ease;
+    margin-top:24px;
+    padding:22px;
+    border-radius:22px;
+    background:#fff8fb;
+    border:1px solid rgba(212,175,55,0.3);
+    display:none;
+    animation:fadeIn 0.5s ease;
 }
 
 .result h3{
-font-family:'Cormorant Garamond', serif;
-font-size:30px;
-margin-bottom:12px;
-color:#b26b83;
+    font-family:'Cormorant Garamond', serif;
+    font-size:30px;
+    margin-bottom:12px;
+    color:#b26b83;
 }
 
 .result p{
-line-height:1.8;
-color:#5f4851;
+    line-height:1.8;
+    color:#5f4851;
+}
+
+.buttons{
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
 
 .btn{
-display:block;
-margin-top:28px;
-text-decoration:none;
-padding:16px;
-border-radius:18px;
-text-align:center;
-font-weight:600;
-background:linear-gradient(135deg,#d4af37,#f3d87a);
-color:#5b3f00;
+    display:block;
+    text-decoration:none;
+    padding:16px;
+    border-radius:18px;
+    text-align:center;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.telegram-btn{
+    background:linear-gradient(135deg,#d4af37,#f3d87a);
+    color:#5b3f00;
+}
+
+.telegram-btn:hover{
+    transform:translateY(-2px);
 }
 
 .footer{
-text-align:center;
-margin:30px 0 20px;
-color:#8d6671;
-font-size:14px;
+    text-align:center;
+    margin:30px 0 20px;
+    color:#8d6671;
+    font-size:14px;
 }
 
 .glow{
-position:fixed;
-width:300px;
-height:300px;
-background:rgba(255,192,203,0.25);
-border-radius:50%;
-filter:blur(60px);
-z-index:-1;
+    position:fixed;
+    width:300px;
+    height:300px;
+    background:rgba(255,192,203,0.25);
+    border-radius:50%;
+    filter:blur(60px);
+    z-index:-1;
 }
 
 .glow1{
-top:-100px;
-left:-100px;
+    top:-100px;
+    left:-100px;
 }
 
 .glow2{
-bottom:-100px;
-right:-100px;
+    bottom:-100px;
+    right:-100px;
 }
 
 @keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(10px);
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
-to{
-opacity:1;
-transform:translateY(0);
-}
+
+@media(max-width:480px){
+    h1{
+        font-size:36px;
+    }
+
+    .tool-title{
+        font-size:30px;
+    }
 }
 </style>
 </head>
-
 <body>
 
 <div class="glow glow1"></div>
@@ -186,93 +227,117 @@ transform:translateY(0);
 
 <div class="container">
 
-<div class="hero">
+    <div class="hero">
 
-<div style="font-size:64px; margin-bottom:18px;">🔮</div>
+        <div style="font-size:64px; margin-bottom:18px;">🔮</div>
 
-<h1>Дарья</h1>
+        <h1>Дарья</h1>
 
-<div class="channel">
-Канал «Блог психически здоровой ВедьМы»
-</div>
+        <div class="channel">
+            Канал «Блог психически здоровой ВедьМы»
+        </div>
 
-<div class="slogan">
-«Расшифровываю числа вашей судьбы и провожу вас сквозь лабиринты прошлых жизней»
-</div>
+        <div class="slogan">
+            «Расшифровываю числа вашей судьбы и провожу вас сквозь лабиринты прошлых жизней»
+        </div>
 
-</div>
+    </div>
 
-<div class="tool-box">
+    <div class="tool-box">
 
-<div class="tool-title">
-Послание от подсознания
-</div>
+        <div class="tool-title">
+            Послание от подсознания
+        </div>
 
-<div class="tool-description">
-Выбери символ — и получи подсказку, которую твоё подсознание готово открыть именно сейчас ✨
-</div>
+        <div class="tool-description">
+            Выбери символ — и получи подсказку, которую твоё подсознание готово открыть именно сейчас ✨
+        </div>
 
-<div class="symbols">
-<button class="symbol" onclick="showMessage(0)">🌙</button>
-<button class="symbol" onclick="showMessage(1)">🔮</button>
-<button class="symbol" onclick="showMessage(2)">🕯️</button>
-<button class="symbol" onclick="showMessage(3)">✨</button>
-<button class="symbol" onclick="showMessage(4)">🌸</button>
-<button class="symbol" onclick="showMessage(5)">🗝️</button>
-</div>
+        <div class="symbols">
 
-<div class="result" id="result">
-<h3 id="resultTitle"></h3>
-<p id="resultText"></p>
-</div>
+            <button class="symbol" onclick="showMessage(0)">🌙</button>
+            <button class="symbol" onclick="showMessage(1)">🔮</button>
+            <button class="symbol" onclick="showMessage(2)">🕯️</button>
+            <button class="symbol" onclick="showMessage(3)">✨</button>
+            <button class="symbol" onclick="showMessage(4)">🌸</button>
+            <button class="symbol" onclick="showMessage(5)">🗝️</button>
 
-<a class="btn" href="https://t.me/darya_bova" target="_blank">
-Записаться к Дарье
-</a>
+        </div>
 
-</div>
+        <div class="result" id="result">
+            <h3 id="resultTitle"></h3>
+            <p id="resultText"></p>
+        </div>
 
-<div class="footer">
-Дарья • Блог психически здоровой ВедьМы
-</div>
+        <div class="buttons">
+
+            <a class="btn telegram-btn" href="https://t.me/darya_bova" target="_blank">
+                Записаться к Дарье
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Дарья • Блог психически здоровой ВедьМы
+    </div>
 
 </div>
 
 <script>
+
 const messages = [
+
 {
 title:"Луна открывает скрытое",
-text:"Ты слишком долго держала чувства внутри. Сейчас важно не убегать от эмоций, а внимательно услышать их."
+text:"Ты слишком долго держала чувства внутри. Сейчас важно не убегать от эмоций, а внимательно услышать их. Именно в непрожитых переживаниях спрятан следующий уровень твоей силы."
 },
+
 {
 title:"Хрустальный шар знает",
-text:"Ты уже чувствуешь ответ внутри себя, но продолжаешь искать разрешение извне."
+text:"Ты уже чувствуешь ответ внутри себя, но продолжаешь искать разрешение извне. Твоё подсознание просит довериться себе и перестать обесценивать свою интуицию."
 },
+
 {
 title:"Свеча очищения",
-text:"Пришло время отпустить старый сценарий, который больше не работает."
+text:"Пришло время отпустить старый сценарий, который больше не работает. Ты не обязана тащить прошлое в своё будущее."
 },
+
 {
 title:"Послание звезды",
-text:"Через принятие приходит ясность и внутренняя устойчивость."
+text:"Сейчас тебе важно не ускоряться, а научиться быть рядом с собой. Через принятие приходит ясность и внутренняя устойчивость."
 },
+
 {
 title:"Цветок души",
-text:"Не прячь свою мягкость — именно она становится твоей настоящей силой."
+text:"Ты проходишь период внутреннего раскрытия. Не прячь свою мягкость — именно она становится твоей настоящей силой."
 },
+
 {
 title:"Ключ к прошлому",
-text:"Когда ты увидишь повторяющийся сценарий без страха — дверь к изменениям откроется."
+text:"Один повторяющийся сценарий в жизни хочет быть замеченным. Когда ты увидишь его без страха — дверь к изменениям откроется."
 }
+
 ];
 
 function showMessage(index){
-document.getElementById("result").style.display = "block";
-document.getElementById("resultTitle").innerText = messages[index].title;
-document.getElementById("resultText").innerText = messages[index].text;
-document.getElementById("result").scrollIntoView({behavior:"smooth"});
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("resultTitle").innerText = messages[index].title;
+
+    document.getElementById("resultText").innerText = messages[index].text;
+
+    document.getElementById("result").scrollIntoView({
+        behavior:"smooth"
+    });
 }
+
 </script>
 
 </body>
 </html>
+```
+
+Готово! Это твоя личная страница. Скопируй весь код — и в бонусном уроке ты узнаешь как разместить это как настоящий сайт за 5 минут. А пока — покажи результат в чате эфира 🔥
