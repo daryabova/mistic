@@ -1,266 +1,277 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Блог психически здоровой ВедьМы</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Manrope', sans-serif;
-    background:
-        radial-gradient(circle at top, rgba(39,120,120,0.35), transparent 30%),
-        radial-gradient(circle at bottom, rgba(35,70,130,0.4), transparent 35%),
-        #07131f;
-    color:#eef7f7;
-    min-height:100vh;
-    overflow-x:hidden;
+font-family:'Montserrat', sans-serif;
+background:linear-gradient(180deg,#fff4f8 0%,#ffe6ef 100%);
+color:#5c3a46;
+min-height:100vh;
+overflow-x:hidden;
 }
 
 .container{
-    width:100%;
-    max-width:480px;
-    margin:0 auto;
-    padding:24px;
+width:100%;
+max-width:480px;
+margin:0 auto;
+padding:20px;
 }
 
 .hero{
-    text-align:center;
-    padding-top:20px;
-}
-
-.avatar{
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    margin:0 auto 20px;
-    border:2px solid rgba(154,255,222,0.5);
-    background:
-        linear-gradient(135deg, rgba(42,77,120,0.7), rgba(45,123,98,0.6));
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:20px;
-    font-size:13px;
-    color:#cceee8;
-    box-shadow:0 0 25px rgba(67,196,162,0.35);
+background:rgba(255,255,255,0.75);
+border:1px solid rgba(212,175,55,0.35);
+backdrop-filter:blur(12px);
+border-radius:28px;
+padding:28px 22px;
+text-align:center;
+box-shadow:0 10px 30px rgba(214,153,174,0.18);
+margin-top:20px;
 }
 
 h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:42px;
-    line-height:1;
-    margin-bottom:12px;
-    font-weight:700;
+font-family:'Cormorant Garamond', serif;
+font-size:42px;
+color:#a65c74;
+margin-bottom:8px;
 }
 
 .channel{
-    color:#8fe3cb;
-    margin-bottom:16px;
-    font-size:15px;
-    letter-spacing:1px;
+font-size:15px;
+color:#8d6671;
+margin-bottom:18px;
 }
 
 .slogan{
-    font-family:'Cormorant Garamond', serif;
-    font-size:28px;
-    line-height:1.2;
-    margin-bottom:40px;
-    color:#d8fff2;
+font-size:16px;
+line-height:1.7;
+color:#5b4850;
 }
 
-.card{
-    background:rgba(12, 24, 38, 0.75);
-    border:1px solid rgba(120,255,223,0.15);
-    border-radius:28px;
-    padding:30px 24px;
-    backdrop-filter: blur(10px);
-    box-shadow:0 0 30px rgba(0,0,0,0.35);
+.tool-box{
+margin-top:26px;
+background:white;
+border-radius:28px;
+padding:28px 22px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+border:1px solid rgba(212,175,55,0.25);
 }
 
-.card h2{
-    font-family:'Cormorant Garamond', serif;
-    font-size:34px;
-    margin-bottom:14px;
-    text-align:center;
+.tool-title{
+font-family:'Cormorant Garamond', serif;
+font-size:34px;
+text-align:center;
+color:#b26b83;
+margin-bottom:14px;
 }
 
-.card p{
-    text-align:center;
-    color:#d6e5ea;
-    line-height:1.6;
-    margin-bottom:24px;
+.tool-description{
+text-align:center;
+line-height:1.7;
+color:#6b4d57;
+margin-bottom:24px;
 }
 
-.magic-btn{
-    width:100%;
-    padding:16px;
-    border:none;
-    border-radius:18px;
-    background:linear-gradient(135deg,#1b5f75,#3cae8d);
-    color:white;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-    box-shadow:0 0 20px rgba(77,210,181,0.35);
+.symbols{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
 }
 
-.magic-btn:hover{
-    transform:translateY(-2px) scale(1.01);
+.symbol{
+background:linear-gradient(135deg,#ffe4ee,#fff4d2);
+border:none;
+border-radius:20px;
+height:90px;
+font-size:34px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 6px 15px rgba(214,175,55,0.12);
 }
 
-.prediction-box{
-    margin-top:24px;
-    padding:24px;
-    border-radius:22px;
-    background:rgba(9,17,28,0.8);
-    border:1px solid rgba(145,255,224,0.18);
-    min-height:140px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    line-height:1.7;
-    font-size:18px;
-    color:#e9fff7;
-    opacity:0;
-    transform:translateY(10px);
-    transition:0.5s;
+.symbol:hover{
+transform:translateY(-4px) scale(1.03);
 }
 
-.prediction-box.show{
-    opacity:1;
-    transform:translateY(0);
+.result{
+margin-top:24px;
+padding:22px;
+border-radius:22px;
+background:#fff8fb;
+border:1px solid rgba(212,175,55,0.3);
+display:none;
+animation:fadeIn 0.5s ease;
 }
 
-.buttons{
-    margin-top:34px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
+.result h3{
+font-family:'Cormorant Garamond', serif;
+font-size:30px;
+margin-bottom:12px;
+color:#b26b83;
 }
 
-.telegram-btn{
-    text-decoration:none;
-    text-align:center;
-    padding:16px;
-    border-radius:18px;
-    background:#8fffd8;
-    color:#08202d;
-    font-weight:700;
-    transition:0.3s;
+.result p{
+line-height:1.8;
+color:#5f4851;
+}
+
+.btn{
+display:block;
+margin-top:28px;
+text-decoration:none;
+padding:16px;
+border-radius:18px;
+text-align:center;
+font-weight:600;
+background:linear-gradient(135deg,#d4af37,#f3d87a);
+color:#5b3f00;
 }
 
 .footer{
-    margin-top:40px;
-    text-align:center;
-    color:#9ab7bc;
-    font-size:14px;
-    line-height:1.6;
+text-align:center;
+margin:30px 0 20px;
+color:#8d6671;
+font-size:14px;
 }
 
+.glow{
+position:fixed;
+width:300px;
+height:300px;
+background:rgba(255,192,203,0.25);
+border-radius:50%;
+filter:blur(60px);
+z-index:-1;
+}
+
+.glow1{
+top:-100px;
+left:-100px;
+}
+
+.glow2{
+bottom:-100px;
+right:-100px;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 </style>
 </head>
+
 <body>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
 
 <div class="container">
 
-<section class="hero">
+<div class="hero">
 
-<div class="avatar">
-ВСТАВЬ<br>
-СВОЁ ФОТО<br>
-ИЛИ АВАТАР
-</div>
+<div style="font-size:64px; margin-bottom:18px;">🔮</div>
 
 <h1>Дарья</h1>
 
 <div class="channel">
-Блог психически здоровой ВедьМы
+Канал «Блог психически здоровой ВедьМы»
 </div>
 
 <div class="slogan">
-«Что излучаешь,<br>
-то и получаешь»
+«Расшифровываю числа вашей судьбы и провожу вас сквозь лабиринты прошлых жизней»
 </div>
 
-</section>
-
-<section class="card">
-
-<h2>Мистическое предсказание дня</h2>
-
-<p>
-Нажми на кнопку и получи послание от своего подсознания ✨
-</p>
-
-<button class="magic-btn" onclick="showPrediction()">
-Получить предсказание
-</button>
-
-<div class="prediction-box" id="prediction">
-Твоё послание появится здесь...
 </div>
 
-<div class="buttons">
-<a class="telegram-btn" href="https://t.me/darya_bova" target="_blank">
+<div class="tool-box">
+
+<div class="tool-title">
+Послание от подсознания
+</div>
+
+<div class="tool-description">
+Выбери символ — и получи подсказку, которую твоё подсознание готово открыть именно сейчас ✨
+</div>
+
+<div class="symbols">
+<button class="symbol" onclick="showMessage(0)">🌙</button>
+<button class="symbol" onclick="showMessage(1)">🔮</button>
+<button class="symbol" onclick="showMessage(2)">🕯️</button>
+<button class="symbol" onclick="showMessage(3)">✨</button>
+<button class="symbol" onclick="showMessage(4)">🌸</button>
+<button class="symbol" onclick="showMessage(5)">🗝️</button>
+</div>
+
+<div class="result" id="result">
+<h3 id="resultTitle"></h3>
+<p id="resultText"></p>
+</div>
+
+<a class="btn" href="https://t.me/darya_bova" target="_blank">
 Записаться к Дарье
 </a>
+
 </div>
 
-</section>
-
-<footer class="footer">
-Дарья · Регрессивный Нумеролог<br>
-Канал «Блог психически здоровой ВедьМы»
-</footer>
+<div class="footer">
+Дарья • Блог психически здоровой ВедьМы
+</div>
 
 </div>
 
 <script>
-
-const predictions = [
-
-"Ты слишком долго пыталась быть удобной. Сегодня день вернуть себе голос.",
-"Повторяющийся сценарий не наказание. Это дверь, которую ты пока боишься открыть.",
-"Твоя интуиция уже знает ответ. Перестань ждать разрешения извне.",
-"То, что сейчас рушится — освобождает место для настоящего.",
-"Ты не обязана спасать всех ценой себя.",
-"Скрытая сила просыпается именно в момент, когда кажется что сил нет.",
-"Подавленные эмоции просятся быть услышанными, а не исправленными.",
-"Сегодня важно не убегать от чувств, а прожить их честно.",
-"Ты ближе к себе настоящей, чем думаешь.",
-"Иногда Вселенная убирает людей не как наказание, а как защиту.",
-"Твоё состояние создаёт реальность быстрее, чем твои планы.",
-"Перемены уже начались. Даже если внешне пока тихо."
-
+const messages = [
+{
+title:"Луна открывает скрытое",
+text:"Ты слишком долго держала чувства внутри. Сейчас важно не убегать от эмоций, а внимательно услышать их."
+},
+{
+title:"Хрустальный шар знает",
+text:"Ты уже чувствуешь ответ внутри себя, но продолжаешь искать разрешение извне."
+},
+{
+title:"Свеча очищения",
+text:"Пришло время отпустить старый сценарий, который больше не работает."
+},
+{
+title:"Послание звезды",
+text:"Через принятие приходит ясность и внутренняя устойчивость."
+},
+{
+title:"Цветок души",
+text:"Не прячь свою мягкость — именно она становится твоей настоящей силой."
+},
+{
+title:"Ключ к прошлому",
+text:"Когда ты увидишь повторяющийся сценарий без страха — дверь к изменениям откроется."
+}
 ];
 
-function showPrediction(){
-
-const box = document.getElementById('prediction');
-
-const randomPrediction =
-predictions[Math.floor(Math.random() * predictions.length)];
-
-box.innerHTML = "✨ " + randomPrediction;
-
-box.classList.add('show');
-
+function showMessage(index){
+document.getElementById("result").style.display = "block";
+document.getElementById("resultTitle").innerText = messages[index].title;
+document.getElementById("resultText").innerText = messages[index].text;
+document.getElementById("result").scrollIntoView({behavior:"smooth"});
 }
-
 </script>
 
 </body>
