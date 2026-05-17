@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Блог психически здоровой ВедьМы</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Manrope', sans-serif;
+    background:
+        radial-gradient(circle at top, rgba(39,120,120,0.35), transparent 30%),
+        radial-gradient(circle at bottom, rgba(35,70,130,0.4), transparent 35%),
+        #07131f;
+    color:#eef7f7;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.container{
+    width:100%;
+    max-width:480px;
+    margin:0 auto;
+    padding:24px;
+}
+
+.hero{
+    text-align:center;
+    padding-top:20px;
+}
+
+.avatar{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    margin:0 auto 20px;
+    border:2px solid rgba(154,255,222,0.5);
+    background:
+        linear-gradient(135deg, rgba(42,77,120,0.7), rgba(45,123,98,0.6));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+    color:#cceee8;
+    box-shadow:0 0 25px rgba(67,196,162,0.35);
+}
+
+h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:42px;
+    line-height:1;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.channel{
+    color:#8fe3cb;
+    margin-bottom:16px;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+.slogan{
+    font-family:'Cormorant Garamond', serif;
+    font-size:28px;
+    line-height:1.2;
+    margin-bottom:40px;
+    color:#d8fff2;
+}
+
+.card{
+    background:rgba(12, 24, 38, 0.75);
+    border:1px solid rgba(120,255,223,0.15);
+    border-radius:28px;
+    padding:30px 24px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,0.35);
+}
+
+.card h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    margin-bottom:14px;
+    text-align:center;
+}
+
+.card p{
+    text-align:center;
+    color:#d6e5ea;
+    line-height:1.6;
+    margin-bottom:24px;
+}
+
+.magic-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#1b5f75,#3cae8d);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 20px rgba(77,210,181,0.35);
+}
+
+.magic-btn:hover{
+    transform:translateY(-2px) scale(1.01);
+}
+
+.prediction-box{
+    margin-top:24px;
+    padding:24px;
+    border-radius:22px;
+    background:rgba(9,17,28,0.8);
+    border:1px solid rgba(145,255,224,0.18);
+    min-height:140px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    line-height:1.7;
+    font-size:18px;
+    color:#e9fff7;
+    opacity:0;
+    transform:translateY(10px);
+    transition:0.5s;
+}
+
+.prediction-box.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.buttons{
+    margin-top:34px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.telegram-btn{
+    text-decoration:none;
+    text-align:center;
+    padding:16px;
+    border-radius:18px;
+    background:#8fffd8;
+    color:#08202d;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:#9ab7bc;
+    font-size:14px;
+    line-height:1.6;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<section class="hero">
+
+<div class="avatar">
+ВСТАВЬ<br>
+СВОЁ ФОТО<br>
+ИЛИ АВАТАР
+</div>
+
+<h1>Дарья</h1>
+
+<div class="channel">
+Блог психически здоровой ВедьМы
+</div>
+
+<div class="slogan">
+«Что излучаешь,<br>
+то и получаешь»
+</div>
+
+</section>
+
+<section class="card">
+
+<h2>Мистическое предсказание дня</h2>
+
+<p>
+Нажми на кнопку и получи послание от своего подсознания ✨
+</p>
+
+<button class="magic-btn" onclick="showPrediction()">
+Получить предсказание
+</button>
+
+<div class="prediction-box" id="prediction">
+Твоё послание появится здесь...
+</div>
+
+<div class="buttons">
+<a class="telegram-btn" href="https://t.me/darya_bova" target="_blank">
+Записаться к Дарье
+</a>
+</div>
+
+</section>
+
+<footer class="footer">
+Дарья · Регрессивный Нумеролог<br>
+Канал «Блог психически здоровой ВедьМы»
+</footer>
+
+</div>
+
+<script>
+
+const predictions = [
+
+"Ты слишком долго пыталась быть удобной. Сегодня день вернуть себе голос.",
+"Повторяющийся сценарий не наказание. Это дверь, которую ты пока боишься открыть.",
+"Твоя интуиция уже знает ответ. Перестань ждать разрешения извне.",
+"То, что сейчас рушится — освобождает место для настоящего.",
+"Ты не обязана спасать всех ценой себя.",
+"Скрытая сила просыпается именно в момент, когда кажется что сил нет.",
+"Подавленные эмоции просятся быть услышанными, а не исправленными.",
+"Сегодня важно не убегать от чувств, а прожить их честно.",
+"Ты ближе к себе настоящей, чем думаешь.",
+"Иногда Вселенная убирает людей не как наказание, а как защиту.",
+"Твоё состояние создаёт реальность быстрее, чем твои планы.",
+"Перемены уже начались. Даже если внешне пока тихо."
+
+];
+
+function showPrediction(){
+
+const box = document.getElementById('prediction');
+
+const randomPrediction =
+predictions[Math.floor(Math.random() * predictions.length)];
+
+box.innerHTML = "✨ " + randomPrediction;
+
+box.classList.add('show');
+
+}
+
+</script>
+
+</body>
+</html>
