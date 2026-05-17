@@ -104,8 +104,14 @@ h1{
 
 .symbols{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:12px;
+    width:100%;
+}
+
+.symbol{
+    width:100%;
+    min-width:0;
 }
 
 .symbol{
@@ -257,10 +263,10 @@ h1{
 
             <button class="symbol" onclick="showMessage(0)">🌙</button>
             <button class="symbol" onclick="showMessage(1)">🔮</button>
-            <button class="symbol" onclick="showMessage(2)">🕯️</button>
+            <button class="symbol" onclick="showMessage(2)">🔥</button>
             <button class="symbol" onclick="showMessage(3)">✨</button>
             <button class="symbol" onclick="showMessage(4)">🌸</button>
-            <button class="symbol" onclick="showMessage(5)">🗝️</button>
+            <button class="symbol" onclick="showMessage(5)">🔑</button>
 
         </div>
 
